@@ -18,6 +18,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", base_url)
+        buildConfigField("String", "NEWS_API_ACCESS_KEY", news_api_key)
         vectorDrawables {
             useSupportLibrary true
         }
@@ -46,6 +48,9 @@ android {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
