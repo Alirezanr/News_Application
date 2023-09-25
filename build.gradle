@@ -2,7 +2,8 @@
 buildscript {
     ext {
         compose_version = '1.1.1'
-        hilt_version = '2.43.2'
+        hilt_version = '2.45'
+        roomVersion = '2.5.2'
         base_url = "\"https://newsapi.org/v2/\""
         news_api_key = "\"433da70ec16d41f8b90baa750050e774\""
     }
