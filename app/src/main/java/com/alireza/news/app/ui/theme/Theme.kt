@@ -1,4 +1,4 @@
-package com.alireza.news.newsList.presentation.ui.theme
+package com.alireza.news.app.ui.theme
 
 import android.app.Activity
 import android.os.Build

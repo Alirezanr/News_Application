@@ -1,8 +1,8 @@
-package com.alireza.news.newsList.data.local
+package com.alireza.news.newsList.data.dataSource.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.alireza.news.newsList.data.local.entity.NewsArticleEntity
+import com.alireza.news.newsList.data.dataSource.local.entity.NewsArticleEntity
 
 
 @Database(

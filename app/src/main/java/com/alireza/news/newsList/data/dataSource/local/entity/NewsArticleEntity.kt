@@ -1,4 +1,4 @@
-package com.alireza.news.newsList.data.local.entity
+package com.alireza.news.newsList.data.dataSource.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

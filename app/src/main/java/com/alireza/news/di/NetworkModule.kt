@@ -3,7 +3,7 @@ package com.alireza.news.di
 import com.alireza.news.BuildConfig
 import com.alireza.news.BuildConfig.DEBUG
 import com.alireza.news.core.TIMEOUT
-import com.alireza.news.newsList.data.remote.NewsApi
+import com.alireza.news.newsList.data.dataSource.remote.api.NewsApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

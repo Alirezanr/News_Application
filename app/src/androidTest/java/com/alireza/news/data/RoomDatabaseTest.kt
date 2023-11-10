@@ -2,8 +2,8 @@ package com.alireza.news.data
 
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.alireza.news.newsList.data.local.NewsDatabase
-import com.alireza.news.newsList.data.local.entity.NewsArticleEntity
+import com.alireza.news.newsList.data.dataSource.local.NewsDatabase
+import com.alireza.news.newsList.data.dataSource.local.entity.NewsArticleEntity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import app.cash.turbine.test

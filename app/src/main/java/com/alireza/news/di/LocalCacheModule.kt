@@ -2,7 +2,7 @@ package com.alireza.news.di
 
 import android.content.Context
 import androidx.room.Room
-import com.alireza.news.newsList.data.local.NewsDatabase
+import com.alireza.news.newsList.data.dataSource.local.NewsDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
