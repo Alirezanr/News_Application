@@ -1,9 +1,9 @@
-package com.alireza.news.feature_news.data.local
+package com.alireza.news.newsList.data.local
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
-import com.alireza.news.feature_news.data.local.entity.NewsArticleEntity
+import com.alireza.news.newsList.data.local.entity.NewsArticleEntity
 import kotlinx.coroutines.flow.Flow
 
 

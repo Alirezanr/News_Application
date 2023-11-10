@@ -1,4 +1,4 @@
-package com.alireza.news.feature_news.presentation
+package com.alireza.news.newsList.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.alireza.news.feature_news.presentation.ui.theme.NewsAppTheme
+import com.alireza.news.newsList.presentation.ui.theme.NewsAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
