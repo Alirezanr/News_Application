@@ -1,8 +1,8 @@
-package com.alireza.news_app.di
+package com.alireza.news.di
 
 import android.content.Context
 import androidx.room.Room
-import com.alireza.news_app.feature_news.data.local.NewsDatabase
+import com.alireza.news.feature_news.data.local.NewsDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

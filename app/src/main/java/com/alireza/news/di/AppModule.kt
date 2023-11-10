@@ -1,4 +1,4 @@
-package com.alireza.news_app.di
+package com.alireza.news.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

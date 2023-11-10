@@ -1,8 +1,8 @@
-package com.alireza.news_app.feature_news.data.local
+package com.alireza.news.feature_news.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.alireza.news_app.feature_news.data.local.entity.NewsArticleEntity
+import com.alireza.news.feature_news.data.local.entity.NewsArticleEntity
 
 
 @Database(

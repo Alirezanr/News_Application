@@ -1,4 +1,4 @@
-package com.alireza.news_app
+package com.alireza.news
 
 import org.junit.Test
 

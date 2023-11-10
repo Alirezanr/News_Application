@@ -1,4 +1,4 @@
-package com.alireza.news_app.feature_news.data.local.entity
+package com.alireza.news.feature_news.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

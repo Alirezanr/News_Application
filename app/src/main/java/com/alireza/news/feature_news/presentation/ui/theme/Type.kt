@@ -1,4 +1,4 @@
-package com.alireza.news_app.feature_news.presentation.ui.theme
+package com.alireza.news.feature_news.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
