@@ -4,9 +4,7 @@ import com.alireza.news_app.BuildConfig
 import com.alireza.news_app.BuildConfig.DEBUG
 import com.alireza.news_app.core.TIMEOUT
 import com.alireza.news_app.feature_news.data.remote.NewsApi
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +13,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -25,7 +23,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun gson(): Gson = GsonBuilder().create()
+    fun provideMoshi(): Moshi = Moshi.Builder().build()
 
     @Provides
     @Singleton
@@ -58,11 +56,10 @@ object NetworkModule {
     @Singleton
     fun retrofit(
         okHttpClient: OkHttpClient,
-        gson: Gson
+        moshi: Moshi
     ): Retrofit = Retrofit.Builder()
         .baseUrl(BuildConfig.BASE_URL)
-        .addCallAdapterFactory(CoroutineCallAdapterFactory.invoke())
-        .addConverterFactory(GsonConverterFactory.create(gson))
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
         .client(okHttpClient)
         .build()
 
