@@ -1,4 +1,4 @@
-package com.alireza.news_app.feature_news.presentation.ui.theme
+package com.alireza.news_app.core.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
