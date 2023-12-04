@@ -2,7 +2,7 @@ package com.alireza.news_app.di
 
 import com.alireza.news_app.BuildConfig
 import com.alireza.news_app.BuildConfig.DEBUG
-import com.alireza.news_app.core.TIMEOUT
+import com.alireza.news_app.util.NETWORK_REQUEST_TIMEOUT
 import com.alireza.news_app.feature_news.data.remote.NewsApi
 import com.squareup.moshi.Moshi
 import dagger.Module
@@ -30,15 +30,6 @@ object NetworkModule {
     fun provideOkHttpClient(): OkHttpClient = OkHttpClient()
         .newBuilder()
         .addInterceptor(
-            HttpLoggingInterceptor().apply {
-                level =
-                    if (DEBUG)
-                        HttpLoggingInterceptor.Level.BODY
-                    else
-                        HttpLoggingInterceptor.Level.NONE
-            }
-        )
-        .addInterceptor(
             Interceptor { chain ->
                 chain.proceed(
                     chain.request().newBuilder()
@@ -47,9 +38,18 @@ object NetworkModule {
                 )
             }
         )
-        .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
-        .readTimeout(TIMEOUT, TimeUnit.SECONDS)
-        .writeTimeout(TIMEOUT, TimeUnit.SECONDS)
+        .addInterceptor(
+            HttpLoggingInterceptor().apply {
+                level =
+                    if (DEBUG)
+                        HttpLoggingInterceptor.Level.BODY
+                    else
+                        HttpLoggingInterceptor.Level.NONE
+            }
+        )
+        .connectTimeout(NETWORK_REQUEST_TIMEOUT, TimeUnit.SECONDS)
+        .readTimeout(NETWORK_REQUEST_TIMEOUT, TimeUnit.SECONDS)
+        .writeTimeout(NETWORK_REQUEST_TIMEOUT, TimeUnit.SECONDS)
         .build()
 
     @Provides
