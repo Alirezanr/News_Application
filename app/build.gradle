@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.alireza.news_app'
+    namespace 'com.alireza.newsApp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.alireza.news_app"
+        applicationId "com.alireza.newsApp"
         minSdk 26
         targetSdk 33
         versionCode 1
